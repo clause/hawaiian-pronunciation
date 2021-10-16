@@ -1,0 +1,13 @@
+# This file may be used to create an environment using:
+# $ conda env create --name <env> --file <this file>
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - setuptools
+    - pytest
+    - sphinx
+
