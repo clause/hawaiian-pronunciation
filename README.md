@@ -2,7 +2,7 @@
 
 Solution to Kendall Bingham's [Hawaiian Words](http://nifty.stanford.edu/2019/bingham-hawaiian-phonetic-generator/) assignment from [Nifty Assignments](http://nifty.stanford.edu/)
 
-## Prerequistes
+## Prerequisites
 
 Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) and read through its [User Guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html).
 
