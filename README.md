@@ -34,3 +34,7 @@ pytest
 - `hawaiian.py` contains the entire application.
 - `test_hawaiian.py` contains the entire test suite.
 - `docs/Hawaiian\ Word\ Phonetic\ Generator.pdf` is a copy of the Hawaiian Word assignment.
+
+## Status
+
+https://github.com/clause/hawaiian-pronunciation/actions/workflows/main.yml/badge.svg

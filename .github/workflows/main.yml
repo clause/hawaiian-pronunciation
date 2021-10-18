@@ -27,7 +27,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           activate-environment: hawaiian-pronunciation
           environment-file: conda.yml
-          
+
       - name: Check Conda
         run: |
           conda info
