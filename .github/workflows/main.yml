@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: ["ubuntu-latest"]
-        python-version: [3.8, 3.9]
+        python-version: [3.9]
 
     defaults:
       run:
@@ -26,7 +26,15 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
-          
+          environment-file: conda.yml
+          auto-activate-base: false
+          activate-environment: hawaiian-pronunciation
+
+      - name: Check Conda
+        run: |
+          conda info
+          conda list
+
       - name: Run tests
         run: |
           pytest
