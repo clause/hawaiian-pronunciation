@@ -37,4 +37,4 @@ pytest
 
 ## Status
 
-https://github.com/clause/hawaiian-pronunciation/actions/workflows/main.yml/badge.svg
+![example workflow](https://github.com/clause/hawaiian-pronunciation/actions/workflows/main.yml/badge.svg)
