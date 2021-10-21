@@ -1,5 +1,3 @@
-from typing import Optional
-
 import pytest
 
 from hawaiian import *
@@ -23,17 +21,17 @@ from hawaiian import *
     ("o", HawaiianVowel.O),
     ("u", HawaiianVowel.U),
 
-    # Hawaiian Vowel Pairs
-    ("ai", None),
-    ("ae", None),
-    ("ao", None),
-    ("au", None),
-    ("ei", None),
-    ("eu", None),
-    ("iu", None),
-    ("oi", None),
-    ("ou", None),
-    ("ui", None),
+    # # Hawaiian Vowel Pairs
+    # ("ai", None),
+    # ("ae", None),
+    # ("ao", None),
+    # ("au", None),
+    # ("ei", None),
+    # ("eu", None),
+    # ("iu", None),
+    # ("oi", None),
+    # ("ou", None),
+    # ("ui", None),
 
     # Other
     (".", None),
@@ -125,12 +123,22 @@ def test_vowel_pair_from(s: str, expected: Optional[HawaiianVowelPair]):
     assert vowel_pair_from(s) == expected
 
 
+@pytest.mark.parametrize("s,index,expected", [
+    ("Mahalo", 2, True),
+    ("Mahalo", 4, True),
+    ("Mahalo", 6, False),
+    ("humuhumunukunukuapua'a", 20, False),
+])
+def test_should_insert_hyphen(s: str, index: int, expected: bool):
+    assert should_insert_hyphen(s, index) == expected
+
+
 @pytest.mark.parametrize("word,pronunciation", [
     (HawaiianWord("aloha"), "ah-loh-hah"),
     (HawaiianWord("Kakahiaka"), "kah-kah-hee-ah-kah"),
     (HawaiianWord("Mahalo"), "mah-hah-loh"),
     (HawaiianWord("E"), "eh"),
-    (HawaiianWord("kono"), "koh-moh"),
+    (HawaiianWord("kono"), "koh-noh"),
     (HawaiianWord("mai"), "meye"),
     (HawaiianWord("maui"), "mow-ee"),
     (HawaiianWord("kane"), "kah-neh"),
